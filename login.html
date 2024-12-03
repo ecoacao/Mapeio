@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Sign Up</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Botão de Voltar -->
+    <a href="../index.html" class="back-button">Voltar</a>
+
+    <div class="login-container">
+        <!-- Lateral esquerda - Informações da empresa -->
+        <div class="left-panel">
+            <img src="img/logo.png" alt="Logo da Empresa" class="logo">
+            <h2>Transforme o Futuro de Angola</h2>
+            <p>Participe de projetos que moldam um país mais sustentável e conectado.</p>
+        </div>
+
+        <!-- Painel direito - Formulário de login e cadastro -->
+        <div class="form-panel">
+            <div class="form-box">
+                <h2 id="form-title">Entrar</h2>
+                <form id="auth-form" action="#" method="POST">
+                    <div class="textbox">
+                        <input type="text" placeholder="Usuário" name="username" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Senha" name="password" required>
+                    </div>
+                    <button type="submit" class="btn">Entrar</button>
+                    <div class="footer-links">
+                        <a href="javascript:void(0);" id="toggle-form">Criar conta</a>
+                    </div>
+                </form>
+
+                <!-- Formulário de Cadastro -->
+                <form id="sign-up-form" style="display: none;" action="#" method="POST">
+                    <div class="textbox">
+                        <input type="text" placeholder="Usuário" name="username" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="email" placeholder="E-mail" name="email" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Senha" name="password" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Confirmar Senha" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn">Criar Conta</button>
+                    <div class="footer-links">
+                        <a href="javascript:void(0);" id="toggle-form-login">Já tem uma conta? Entrar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

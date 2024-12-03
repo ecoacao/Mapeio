@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Define colors */
+:root {
+    --primary-color: #6c5800;
+    --text-color: #555;
+    --light-bg: #f8f9fa;
+    --white-color: #fff;
+    --dark-color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--white-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.navbar-toggler-icon {
+   background-color: #333; /* Altere a cor para algo escuro */
+   border-radius: 5px;
+}
+.navbar-brand img {
+    width: 90px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd;
+}
+.btn-primary {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #8f7d2a; /* Slightly lighter shade for hover */
+}
+
+
+/* Cabeçalho */
+.header {
+    background-color: #6f4f1f;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInText 2s ease-in-out 1.5s forwards;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Seção Áreas Limpa */
+.areas-limpa {
+    padding: 60px 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.areas-limpa h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.areas-limpa p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Imagens Antes e Depois */
+.limpeza-imagens {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.limpeza-card {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.limpeza-img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.limpeza-img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.limpeza-img.depois {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.limpeza-card:hover .limpeza-img.antes {
+    opacity: 0;
+}
+
+.limpeza-card:hover .limpeza-img.depois {
+    opacity: 1;
+}
+
+.limpeza-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Imagens dos Outros Exemplos */
+.outros-exemplos h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.exemplos-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.exemplo {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exemplo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.exemplo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.exemplo p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #6f4f1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.footer p {
+    margin: 0;
+    color: white;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    .limpeza-imagens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exemplos-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .exemplo {
+        width: 100%;
+    }
+
+    .limpeza-card {
+        max-width: 90%;
+    }
+}
